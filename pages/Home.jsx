@@ -42,8 +42,8 @@ function Home() {
             </CTAButton>
         </div>
 
-        <div className='mx-3 my-12 shadow-blue-200'>
-            <video
+        <div className='mx-3 my-12 shadow-2xl shadow-white'>
+            <video width="900" height="780"
             muted
             loop
             autoPlay
