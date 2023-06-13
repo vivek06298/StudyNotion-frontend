@@ -1,8 +1,10 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import {FaArrowRight} from "react-icons/fa";
-import HighlightText from '../components/core/Homepage/HighlightText';
+import { Link } from "react-router-dom"
+import {FaArrowRight} from "react-icons/fa"
+import HighlightText from '../components/core/Homepage/HighlightText'
 import CTAButton from "../components/core/Homepage/CTAButton"
+import Banner from "../assets/Images/banner.mp4"
+import CodeBlocks from "../components/core/Homepage/CodeBlocks"
 
 function Home() {
   return (
@@ -38,6 +40,84 @@ function Home() {
             <CTAButton active={false} linkto={"/login"}> 
                 Book a Demo
             </CTAButton>
+        </div>
+
+        <div className='mx-3 my-12 shadow-blue-200'>
+            <video
+            muted
+            loop
+            autoPlay
+            >
+            <source  src={Banner} type="video/mp4" />
+            </video>
+        </div>
+
+          {/* Code Section 1 */}
+          <div>
+            <CodeBlocks 
+                position={"lg:flex-row"}
+                heading={
+                    <div className='text-4xl font-semibold'>
+                        Unlock Your
+                        <HighlightText text={"coding potential"}/>
+                        with our online courses
+                    </div>
+                }
+                subheading = {
+                    "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+                }
+                ctabtn1={
+                    {
+                        btnText: "try it yourself",
+                        linkto: "/signup",
+                        active: true,
+                    }
+                }
+                ctabtn2={
+                    {
+                        btnText: "learn more",
+                        linkto: "/login",
+                        active: false,
+                    }
+                }
+
+                codeblock={`<<!DOCTYPE html>\n<html>\nhead><title>Example</title><linkrel="stylesheet"href="styles.css">\n/head>\n`}
+                codeColor={"text-yellow-25"}
+            />
+        </div>
+
+                {/* Code Section 2 */}
+        <div>
+            <CodeBlocks 
+                position={"lg:flex-row-reverse"}
+                heading={
+                    <div className='text-4xl font-semibold'>
+                        Unlock Your
+                        <HighlightText text={"coding potential"}/>
+                        with our online courses
+                    </div>
+                }
+                subheading = {
+                    "Our courses are designed and taught by industry experts who have years of experience in coding and are passionate about sharing their knowledge with you."
+                }
+                ctabtn1={
+                    {
+                        btnText: "try it yourself",
+                        linkto: "/signup",
+                        active: true,
+                    }
+                }
+                ctabtn2={
+                    {
+                        btnText: "learn more",
+                        linkto: "/login",
+                        active: false,
+                    }
+                }
+
+                codeblock={`<<!DOCTYPE html>\n<html>\nhead><title>Example</title><linkrel="stylesheet"href="styles.css">\n/head>\n`}
+                codeColor={"text-yellow-25"}
+            />
         </div>
 
       </div>
